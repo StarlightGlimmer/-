@@ -21,11 +21,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="practice1.c">
-      <Filter>ソース ファイル\第9回 配列</Filter>
-    </ClCompile>
     <ClCompile Include="kadai8.c">
       <Filter>ソース ファイル\第8回 関数</Filter>
+    </ClCompile>
+    <ClCompile Include="9_practice1.c">
+      <Filter>ソース ファイル\第9回 配列</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
