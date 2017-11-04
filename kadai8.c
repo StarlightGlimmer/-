@@ -1,14 +1,27 @@
 #include <stdio.h>
 
 
-int gcd(const int a, const int b) {
+int Gcd(const int a, const int b) {
 	int num1 = a;
 	int num2 = b;
-	while (num1 != num2) {
-		while (num1 > num2) num1 -= num2;
-		while (num2 > num1) num2 -= num1;
+	while (num1 != 0 && num2 != 0) {
+		if (num1 >= num2) {
+			num1 = num1 % num2;
+		}
+		else {
+			num2 = num2 & num1;
+		}
 	}
-	return num1;
+	
+	int greatestCommonDivisor = 0;
+	if (num1 > num2) {
+		greatestCommonDivisor = num1;
+	}
+	else {
+		greatestCommonDivisor = num2;
+	}
+
+	return greatestCommonDivisor;
 }
 
 
@@ -27,10 +40,10 @@ void main(void) {
 	if (numerator == 0) {
 		printf("(%d)/(%d) + (%d)/(%d) = 0\n", a, b, c, d);
 	}
-	else if (denominator / gcd(numerator, denominator) == 1) {
-		printf("(%d)/(%d) + (%d)/(%d) = %d\n", a, b, c, d, numerator / gcd(numerator, denominator));
+	else if (denominator / Gcd(numerator, denominator) == 1) {
+		printf("(%d)/(%d) + (%d)/(%d) = %d\n", a, b, c, d, numerator / Gcd(numerator, denominator));
 	}
 	else {
-		printf("(%d)/(%d) + (%d)/(%d) = %d/%d\n", a, b, c, d, numerator / gcd(numerator, denominator), denominator / gcd(numerator, denominator));
+		printf("(%d)/(%d) + (%d)/(%d) = %d/%d\n", a, b, c, d, numerator / Gcd(numerator, denominator), denominator / Gcd(numerator, denominator));
 	}
 }
