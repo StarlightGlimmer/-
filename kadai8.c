@@ -27,23 +27,23 @@ int Gcd(const int a, const int b) {
 
 void main(void) {
 	int a, b, c, d;					// 分数の数字
-	int numerator, denominator;		// 分子と分母
 
 	printf("\na/b + c/d を計算します。自然数を入力してください。\na = "); scanf_s("%d", &a);
 	printf("b = "); scanf_s("%d", &b);
 	printf("c = "); scanf_s("%d", &c);
 	printf("d = "); scanf_s("%d", &d);
 
-	numerator = a*d + b*c;
-	denominator = b*d;
+	int Numerator = a*d + b*c;
+	int Denominator = b*d;
 
-	if (numerator == 0) {
-		printf("(%d)/(%d) + (%d)/(%d) = 0\n", a, b, c, d);
-	}
-	else if (denominator / Gcd(numerator, denominator) == 1) {
-		printf("(%d)/(%d) + (%d)/(%d) = %d\n", a, b, c, d, numerator / Gcd(numerator, denominator));
+	int gcdOfNumeratorAndDenominator = Gcd(Numerator, Denominator);
+	int reductedNumerator = Numerator / gcdOfNumeratorAndDenominator;
+	int reductedDenominator = Denominator / gcdOfNumeratorAndDenominator;
+
+	if (reductedDenominator == 1) {
+		printf("(%d)/(%d) + (%d)/(%d) = %d\n", a, b, c, d, reductedNumerator);
 	}
 	else {
-		printf("(%d)/(%d) + (%d)/(%d) = %d/%d\n", a, b, c, d, numerator / Gcd(numerator, denominator), denominator / Gcd(numerator, denominator));
+		printf("(%d)/(%d) + (%d)/(%d) = %d/%d\n", a, b, c, d, reductedNumerator, reductedDenominator);
 	}
 }
