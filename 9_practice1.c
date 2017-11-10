@@ -17,12 +17,12 @@ void main(void) {
 	int n[ONE_DIGIT_MAXIMUM + 1] = { 0 };
 
 	while(1){
-		int InputtedNumber;
-		scanf_s("%d", &InputtedNumber);
-		if (InputtedNumber == -1){
+		int InputtedOneDigitNumber;
+		scanf_s("%d", &InputtedOneDigitNumber);
+		if (InputtedOneDigitNumber == -1){
 			break;
 		}
-		n[InputtedNumber] += 1;
+		n[InputtedOneDigitNumber] += 1;
 	}
 
 	int PrintLoopVariable;
