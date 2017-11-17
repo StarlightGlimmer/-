@@ -1,45 +1,46 @@
-/* â€ëË
-2^300Çê≥ämÇ…åvéZÇπÇÊÅB
-*/
-
 #include <stdio.h>
 
 #define BASE 2
-#define POWER 300
-#define DIGITS 100
+#define EXPONENT 300
+#define ARRAY_DIGITS 100
+#define RADIX 10
 
 
-
-int getProductFirstDigit(int a, int b){
-	int product[2] = { a*b };
-	if (product[0] >= 10){
-		product[1] = product[0] / 10;
-		product[0] -= product[1] * 10;
+int getExactDigit(int numberArray[ARRAY_DIGITS]) {
+	int i;
+	for (i = ARRAY_DIGITS - 1; i >= 0; i--) {
+		if (numberArray[i] != 0) {
+			return i + 1;
+		}
 	}
-	return product[0];
+	return 1;
 }
 
-int main(void){
-	int twoToThe300thPower[DIGITS] = { 1 };
-	
+
+int main(void) {
+	int powerArray[ARRAY_DIGITS] = { 1 };
+
 	int i, j;
-	for (i = 0; i < POWER; i++){
-		for (j = 1; j <= DIGITS; j++){
-			if (twoToThe300thPower[DIGITS - j] < 5){
-				twoToThe300thPower[DIGITS - j] *= BASE;
+
+	// ç≈è„à ÇÃåÖÇ©ÇÁèáÇ…ä|ÇØéZÇêiÇﬂÇÈÅBä|ÇØéZÇÃåJÇËè„Ç™ÇËÇ1Ç¬è„ÇÃåÖÇ…ë´ÇµÅAåªç›ÇÃåÖÇ…1ÇÃà ÇÃêîéöÇë„ì¸ÅBÇ±ÇÍÇEXPONENTâÒåJÇËï‘Ç∑ÅB
+	for (i = 0; i < EXPONENT; i++) {
+		for (j = ARRAY_DIGITS - 1; j >= 0; j--) {
+			if (powerArray[j]*BASE >= RADIX) {
+				powerArray[j + 1] += (powerArray[j]*BASE) / RADIX;
 			}
-			else{
-				twoToThe300thPower[DIGITS - j] = getProductFirstDigit(BASE, twoToThe300thPower[DIGITS - j]);
-				twoToThe300thPower[DIGITS - j +1] += 1;
-			}
+			powerArray[j] = (powerArray[j]*BASE) % RADIX;
 		}
 	}
 
-	int m;
-	printf("2^%d = \n", POWER);
-	for (m = 0; m < DIGITS; m++){
-		printf("%d", twoToThe300thPower[DIGITS - m - 1]);
+	printf("%d^%d = ", BASE, EXPONENT);
+	int answerDigit = getExactDigit(powerArray);
+	int k;
+
+	// êîéöÇÃêÊì™Ç…0Ç™ë±Ç©Ç»Ç¢ÇÊÇ§Ç…ÅAgetExactDigit()Ç≈éÊìæÇµÇΩåÖêîÇæÇØï\é¶Ç∑ÇÈÅB
+	for (k = answerDigit - 1; k >= 0; k--) {
+		printf("%d", powerArray[k]);
 	}
 	printf("\n");
+
 	return 0;
 }
