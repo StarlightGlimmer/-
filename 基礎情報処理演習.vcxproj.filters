@@ -36,5 +36,8 @@
     <ClCompile Include="10_assignment1.c">
       <Filter>ソース ファイル\第10回 配列</Filter>
     </ClCompile>
+    <ClCompile Include="10_assignment2.c">
+      <Filter>ソース ファイル\第10回 配列</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
