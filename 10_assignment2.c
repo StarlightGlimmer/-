@@ -1,7 +1,3 @@
-/* 課題
-2^300を正確に計算せよ。
-*/
-
 #include <stdio.h>
 
 #define BASE 2
@@ -25,10 +21,12 @@ int main(void) {
 	int powerArray[ARRAY_DIGITS] = { 1 };
 
 	int i, j;
+
+	// 最上位の桁から順に掛け算を進める。掛け算の繰り上がりを1つ上の桁に足し、現在の桁に1の位の数字を代入。これをEXPONENT回繰り返す。
 	for (i = 0; i < EXPONENT; i++) {
 		for (j = ARRAY_DIGITS - 1; j >= 0; j--) {
 			if (powerArray[j]*BASE >= RADIX) {
-				powerArray[j + 1] += 1;
+				powerArray[j + 1] += (powerArray[j]*BASE) / RADIX;
 			}
 			powerArray[j] = (powerArray[j]*BASE) % RADIX;
 		}
@@ -37,6 +35,8 @@ int main(void) {
 	printf("%d^%d = ", BASE, EXPONENT);
 	int answerDigit = getExactDigit(powerArray);
 	int k;
+
+	// 数字の先頭に0が続かないように、getExactDigit()で取得した桁数だけ表示する。
 	for (k = answerDigit - 1; k >= 0; k--) {
 		printf("%d", powerArray[k]);
 	}
