@@ -13,22 +13,28 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="ソース ファイル\第9回 配列">
-      <UniqueIdentifier>{fed50d15-5fa0-4a0b-943a-d7408224ce2e}</UniqueIdentifier>
+    <Filter Include="ソース ファイル\第10回 配列">
+      <UniqueIdentifier>{b09e3a91-73cf-44c4-a231-607e5b486fd8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\第8回 関数">
+    <Filter Include="ソース ファイル\第08回 関数">
       <UniqueIdentifier>{268fffaa-4e53-4c58-a636-1df40f5cbc90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\第09回 配列">
+      <UniqueIdentifier>{fed50d15-5fa0-4a0b-943a-d7408224ce2e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="kadai8.c">
-      <Filter>ソース ファイル\第8回 関数</Filter>
+      <Filter>ソース ファイル\第08回 関数</Filter>
     </ClCompile>
     <ClCompile Include="9_practice1.c">
-      <Filter>ソース ファイル\第9回 配列</Filter>
+      <Filter>ソース ファイル\第09回 配列</Filter>
     </ClCompile>
     <ClCompile Include="9_assignment.c">
-      <Filter>ソース ファイル\第9回 配列</Filter>
+      <Filter>ソース ファイル\第09回 配列</Filter>
+    </ClCompile>
+    <ClCompile Include="10_assignment1.c">
+      <Filter>ソース ファイル\第10回 配列</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
