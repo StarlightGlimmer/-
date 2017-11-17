@@ -13,10 +13,10 @@ p[0]`p[9]‚É”CˆÓ‚Ì®”‚ğ“ü—Í‚·‚éB‚±‚ê‚ğˆÈ‰º‚Ì•û–@‚Å¸‡(¬Ë‘å)‚É•À‚Ñ‘Ö‚¦‚Äo—Í
 #define NUM_OF_INPUT_INTEGERS 10
 
 
-int SortingIsFinished(int a[NUM_OF_INPUT_INTEGERS]){
+int SortingIsFinished(int integersArray[NUM_OF_INPUT_INTEGERS]){
 	int i;
 	for (i = 0; i < NUM_OF_INPUT_INTEGERS - 1; i++){
-		if (a[i] > a[i + 1]){
+		if (integersArray[i] > integersArray[i + 1]){
 			return 0;
 		}
 	}
