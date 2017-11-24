@@ -15,7 +15,7 @@
 void sub(int *ary, int elements){
 	int i;
 	int replace;
-	for (i = 0; i <= elements/2 - 1; i++){
+	for (i = 0; i <= elements/2; i++){
 		replace = *(ary + (elements-1 - i));
 		*(ary + (elements-1 - i)) = *(ary + i);
 		*(ary + i) = replace;
