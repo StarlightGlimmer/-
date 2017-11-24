@@ -7,7 +7,7 @@
 (これによって配列pの内容が変更される)
 4. mainｄ逆順になった配列pを表示する。
 */
-
+#define ARRAY_SIZE 9
 
 #include <stdio.h>
 
@@ -24,20 +24,20 @@ void sub(int *ary, int elements){
 
 
 int main(void){
-	int p[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	int p[ARRAY_SIZE] = { 1, 2, 3, 4, 5, 6, 7, 8, 9};
 	
 	printf("初期配列: ");
 	int i;
-	for (i = 0; i < 10; i++){
+	for (i = 0; i < ARRAY_SIZE; i++){
 		printf("%2d ", p[i]);
 	}
 	printf("\n");
 
-	sub(p, 10);
+	sub(p, ARRAY_SIZE);
 
 	printf("　　逆順: ");
 	int j;
-	for (j = 0; j < 10; j++){
+	for (j = 0; j < ARRAY_SIZE; j++){
 		printf("%2d ", p[j]);
 	}
 	printf("\n");
