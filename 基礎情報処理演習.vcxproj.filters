@@ -22,6 +22,9 @@
     <Filter Include="ソース ファイル\第09回 配列">
       <UniqueIdentifier>{fed50d15-5fa0-4a0b-943a-d7408224ce2e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\第11回 ポインタ">
+      <UniqueIdentifier>{949be17a-dc94-4b3f-b57e-e5a1d66433a0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="kadai8.c">
@@ -38,6 +41,9 @@
     </ClCompile>
     <ClCompile Include="10_assignment2.c">
       <Filter>ソース ファイル\第10回 配列</Filter>
+    </ClCompile>
+    <ClCompile Include="11_practice1.c">
+      <Filter>ソース ファイル\第11回 ポインタ</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
