@@ -25,6 +25,9 @@
     <Filter Include="ソース ファイル\第11回 ポインタ">
       <UniqueIdentifier>{949be17a-dc94-4b3f-b57e-e5a1d66433a0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\第12回 文字と入出力">
+      <UniqueIdentifier>{ffc99ee1-6cc2-4fa4-a4f8-46e9a13a5a85}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="kadai8.c">
@@ -47,6 +50,9 @@
     </ClCompile>
     <ClCompile Include="11_assignment.c">
       <Filter>ソース ファイル\第11回 ポインタ</Filter>
+    </ClCompile>
+    <ClCompile Include="12_practice1.c">
+      <Filter>ソース ファイル\第12回 文字と入出力</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
