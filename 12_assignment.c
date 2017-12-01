@@ -7,7 +7,7 @@
  */
 
 #define MAX_CHARACTERS_PER_LINE 256
-#define ASCII_CODES 256
+#define ASCII_CODES 128
 #define ASCII_CODE_SPACE 32
 #define ASCII_CODE_DEL 127
 
@@ -38,6 +38,6 @@ int main(void) {
 		fputc((int)'\n', output_text);
 	}
 	fclose(output_text);
-
+    
 	return 0;
 }
