@@ -35,7 +35,7 @@ int main(void) {
 		fputc(j, output_text);
 		fputs(": ", output_text);
 		fprintf(output_text,"%d",characters[j]);
-		fputc((int)'\n', output_text);
+		fputc('\n', output_text);
 	}
 	fclose(output_text);
     
