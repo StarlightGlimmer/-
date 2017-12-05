@@ -30,7 +30,7 @@ int main(void) {
 	
 	FILE *output_text;
 	const char OUTPUT_FILENAME[] = "character count.txt";
-	fopen_s(&output_text, OUTPUT_FILENAME, "a");
+	fopen_s(&output_text, OUTPUT_FILENAME, "w");
 	for (int j = ASCII_CODE_SPACE; j < ASCII_CODE_DEL; j++) {
 		fputc(j, output_text);
 		fputs(": ", output_text);
