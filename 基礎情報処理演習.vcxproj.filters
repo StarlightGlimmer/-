@@ -28,6 +28,9 @@
     <Filter Include="ソース ファイル\第12回 文字と入出力">
       <UniqueIdentifier>{ffc99ee1-6cc2-4fa4-a4f8-46e9a13a5a85}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\第13回 応用%281%29">
+      <UniqueIdentifier>{0b9f2456-4e90-420e-9488-d8f9f6187fe8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="kadai8.c">
@@ -56,6 +59,12 @@
     </ClCompile>
     <ClCompile Include="12_assignment.c">
       <Filter>ソース ファイル\第12回 文字と入出力</Filter>
+    </ClCompile>
+    <ClCompile Include="13_assignment1.c">
+      <Filter>ソース ファイル\第13回 応用%281%29</Filter>
+    </ClCompile>
+    <ClCompile Include="13_assignment2.c">
+      <Filter>ソース ファイル\第13回 応用%281%29</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
