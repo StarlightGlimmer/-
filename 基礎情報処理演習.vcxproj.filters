@@ -81,5 +81,8 @@
     <ClCompile Include="15_assignment1.c">
       <Filter>ソース ファイル\第15回 応用%283%29</Filter>
     </ClCompile>
+    <ClCompile Include="15_assignment2.c">
+      <Filter>ソース ファイル\第15回 応用%283%29</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
