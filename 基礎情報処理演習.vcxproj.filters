@@ -34,6 +34,9 @@
     <Filter Include="ソース ファイル\第14回 応用%282%29">
       <UniqueIdentifier>{6ed69ad6-e9fc-44f2-81f1-e2b82e4d44af}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\第15回 応用%283%29">
+      <UniqueIdentifier>{927e3b7f-1006-4b0e-9934-91cdb6509e5b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="kadai8.c">
@@ -74,6 +77,9 @@
     </ClCompile>
     <ClCompile Include="14_assignment2.c">
       <Filter>ソース ファイル\第14回 応用%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="15_assignment1.c">
+      <Filter>ソース ファイル\第15回 応用%283%29</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
